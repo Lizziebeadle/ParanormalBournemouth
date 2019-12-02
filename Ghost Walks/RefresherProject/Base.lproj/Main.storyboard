@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RefresherProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CXs-yA-52F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yen-Bn-SRO">
+                                <rect key="frame" x="20" y="740" width="374" height="30"/>
+                                <state key="normal" title="Add Home Marker"/>
+                                <connections>
+                                    <action selector="addMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2he-j5-jvs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-EF-pRE">
+                                <rect key="frame" x="20" y="778" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="MX1-nu-dZh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h5x-EF-pRE" secondAttribute="bottom" constant="35" id="68e-bL-72I"/>
+                            <constraint firstItem="yen-Bn-SRO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9db-7p-oPW"/>
+                            <constraint firstItem="h5x-EF-pRE" firstAttribute="top" secondItem="yen-Bn-SRO" secondAttribute="bottom" constant="8" id="DuA-gZ-U06"/>
+                            <constraint firstItem="yen-Bn-SRO" firstAttribute="trailing" secondItem="h5x-EF-pRE" secondAttribute="trailing" id="Kex-Cg-c4r"/>
+                            <constraint firstItem="yen-Bn-SRO" firstAttribute="leading" secondItem="h5x-EF-pRE" secondAttribute="leading" id="R67-qh-tO6"/>
+                            <constraint firstItem="yen-Bn-SRO" firstAttribute="top" secondItem="CXs-yA-52F" secondAttribute="bottom" constant="8" id="X1c-bv-dDh"/>
+                            <constraint firstItem="CXs-yA-52F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gEA-cj-FEc"/>
+                            <constraint firstItem="yen-Bn-SRO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j13-rl-TRW"/>
+                            <constraint firstItem="CXs-yA-52F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="mCW-Qz-73l"/>
+                            <constraint firstItem="CXs-yA-52F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="s14-2m-vfc"/>
+                            <constraint firstItem="CXs-yA-52F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uat-F9-2Jl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="h5x-EF-pRE" id="Jwv-2Z-F1Z"/>
+                        <outlet property="mapView" destination="CXs-yA-52F" id="afN-Eq-zLy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
